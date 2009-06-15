@@ -3,3 +3,4 @@ db/development.sqlite3
 db/test.sqlite3
 db/production.sqlite3
 config/initializers/site_keys.rb
+test/*
