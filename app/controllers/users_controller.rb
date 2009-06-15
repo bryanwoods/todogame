@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
+  before_filter :login_required, :only => [:index, :edit, :update, :destroy, :preview]
   
-
   # render new.rhtml
   def new
     @user = User.new
@@ -25,4 +23,5 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
 end
