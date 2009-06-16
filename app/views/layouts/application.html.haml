@@ -3,10 +3,10 @@
   %head
     %meta{"http-equiv"=>"content-type", :content=>"text/html;charset=UTF-8"}
     %title
-      Todogame:
-      = controller.action_name
+      Todogame
     = stylesheet_link_tag 'scaffold'
   %body
+    = render :partial => 'users/user_bar'
     %p{:style=>"color: green"}
       = flash[:notice]
     = yield
