@@ -15,4 +15,20 @@ describe Task do
   it "should create a new instance given valid attributes" do
     Task.create!(@valid_attributes)
   end
+  
+  it "should render due date to string" do
+    task = Task.new
+    task.due_date.is_a?(String)
+  end
+  
+  it "should parse due_date with Chronic" do
+    task = Task.new
+    task.due_date=("today")
+  end
+  
+  it "should properly parse dates" do
+    task = Task.new
+    task.due_date=("today")
+    task.due_date == Time.now.day
+  end
 end

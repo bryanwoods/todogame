@@ -7,9 +7,9 @@
     %br
     = f.text_field :name
   %p
-    = f.label :due
+    = f.label :due_date
     %br
-    = f.date_select :due
+    = f.text_field :due
   %p
     = f.submit 'Create'
 = link_to 'Back', tasks_path
