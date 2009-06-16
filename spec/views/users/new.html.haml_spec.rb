@@ -27,9 +27,24 @@ describe "/users/new.html.haml" do
     render "/users/new.html.haml"
     response.should have_tag("label[for=?]", /login/)
     response.should have_tag("input[id=?]", /user_login/)
-    response.should have_tag("input[name=?]", "user[login]")
-    response.should have_tag("input[size=?]", /30/)
-    response.should have_tag("input[type=?]", /text/)
+  end
+  
+  it "renders a form field for email" do
+    render "/users/new.html.haml"
+    response.should have_tag("label[for=?]", /email/)
+    response.should have_tag("input[id=?]", /user_email/)
+  end
+  
+  it "renders a form field for password" do
+    render "/users/new.html.haml"
+    response.should have_tag("label[for=?]", /password/)
+    response.should have_tag("input[id=?]", /user_password/)
+  end
+  
+  it "renders a form field for password confirmation" do
+    render "/users/new.html.haml"
+    response.should have_tag("label[for=?]", /password_confirmation/)
+    response.should have_tag("input[id=?]", /user_password_confirmation/)
   end
   
 end
