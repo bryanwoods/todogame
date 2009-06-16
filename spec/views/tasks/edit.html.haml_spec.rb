@@ -18,6 +18,13 @@ describe "/tasks/edit.html.haml" do
       with_tag('input#task_name[name=?]', "task[name]")
     end
   end
+  
+  it "should render a text field for chronic date input" do
+    render
+    
+    response.should have_tag("label[for=?]", "task_due_date")
+    response.should have_tag("input[id=?]", "task_due_date")
+  end
 end
 
 
