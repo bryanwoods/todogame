@@ -3,7 +3,7 @@
   %tr
     %th Name
     %th Due
-  - @tasks.each do |task|
+  - @tasks.reverse.each do |task|
     %tr
       %td
         =h task.name
