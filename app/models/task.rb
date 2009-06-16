@@ -11,7 +11,7 @@ class Task < ActiveRecord::Base
     @invalid_date = true
   end
     
-  def validation
-    errors.add :due_date, 'is not a valid date' if Chronic.parse(due_date.to_s).nil?
+  def validate
+    errors.add :due_date, 'is not a valid date' if @invalid_date
   end
 end

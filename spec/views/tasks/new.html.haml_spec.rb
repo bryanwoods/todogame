@@ -23,7 +23,7 @@ describe "/tasks/new.html.haml" do
     render
     
     response.should have_tag("label[for=?]", "task_due_date")
-    response.should have_tag("input[id=?]", "task_due")
+    response.should have_tag("input[id=?]", "task_due_date")
   end
 end
 
