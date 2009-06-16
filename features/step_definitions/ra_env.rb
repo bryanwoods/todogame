@@ -1,4 +1,3 @@
-
 Before do
   Fixtures.reset_cache
   fixtures_folder = File.join(RAILS_ROOT, 'spec', 'fixtures')
