@@ -9,9 +9,6 @@
     %p
       %b Point Value:
       =h @task.point_value
-    %p
-      %b Done:
-      =h @task.done
 - else
   %p
     %b Name:
@@ -22,9 +19,6 @@
   %p
     %b Point Value:
     =h @task.point_value
-  %p
-    %b Done:
-    =h @task.done
 = link_to 'Edit', edit_task_path(@task)
 |
 = link_to 'Back', tasks_path
