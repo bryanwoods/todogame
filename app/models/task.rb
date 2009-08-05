@@ -14,4 +14,8 @@ class Task < ActiveRecord::Base
   def validate
     errors.add :due_date, 'is not a valid date' if @invalid_date
   end
+  
+  def from_time
+    Time.now
+  end
 end
