@@ -1,24 +1,5 @@
 %h1 Editing task
-- form_for(@task) do |f|
-  = f.error_messages
-  %p
-    = f.label :name
-    %br
-    = f.text_field :name
-  %p
-    = f.label :due_date
-    %br
-    = f.text_field :due_date
-  %p
-    = f.label :point_value
-    %br
-    = f.text_field :point_value
-  %p
-    = f.label :done
-    %br
-    = f.check_box :done
-  %p
-    = f.submit 'Update'
+= render :partial => 'form'
 = link_to 'Show', @task
 |
 = link_to 'Back', tasks_path
