@@ -10,6 +10,14 @@
     %br
     = f.text_field :due_date
   %p
+    = f.label :point_value
+    %br
+    = f.text_field :point_value
+  %p
+    = f.label :done
+    %br
+    = f.check_box :done
+  %p
     = f.submit 'Update'
 = link_to 'Show', @task
 |

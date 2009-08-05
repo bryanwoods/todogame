@@ -3,12 +3,18 @@
   %tr
     %th Name
     %th Due
+    %th Point Value
+    %th Done
   - @tasks.reverse.each do |task|
     %tr
       %td
         =h task.name
       %td
         =h task.due
+      %td
+        =h task.point_value
+      %td
+        =h task.done
       %td
         = link_to 'Show', task
       %td

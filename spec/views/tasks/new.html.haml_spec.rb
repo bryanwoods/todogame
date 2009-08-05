@@ -25,6 +25,13 @@ describe "/tasks/new.html.haml" do
     response.should have_tag("label[for=?]", "task_due_date")
     response.should have_tag("input[id=?]", "task_due_date")
   end
+  
+  it "renders a text field for point value" do
+    render
+    
+    response.should have_tag("label[for=?]", "task_point_value")
+    response.should have_tag("input[id=?]", "task_point_value")
+  end
 end
 
 

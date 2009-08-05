@@ -8,7 +8,8 @@ describe Task do
       :due => Date.today,
       :created_at => Time.now,
       :updated_at => Time.now,
-      :user_id => 1
+      :user_id => 1,
+      :point_value => 1000
     }
   end
 
@@ -30,5 +31,10 @@ describe Task do
     task = Task.new
     task.due_date=("today")
     task.due_date == Time.now.day
+  end
+  
+  it "should render point value to integer" do
+    task = Task.new
+    task.point_value.is_a?(Integer)
   end
 end
