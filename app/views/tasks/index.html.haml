@@ -5,8 +5,9 @@
         %p
           =link_to task.name, task
           %br
-          Due date:
+          Due:
           = distance_of_time_in_words(task.from_time, task.due)
+          from now
           %br
           Point value:
           =h task.point_value
@@ -16,8 +17,9 @@
     %p
       =link_to task.name, task
       %br
-      Due date:
+      Due:
       = distance_of_time_in_words(task.from_time, task.due)
+      from now
       %br
       Point value:
       =h task.point_value
