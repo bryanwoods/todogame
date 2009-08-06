@@ -17,17 +17,5 @@ describe "/tasks/index.html.haml" do
       )
     ]
   end
-
-  it "renders a list of tasks" do
-    render
-    
-    response.should have_tag("tr>td", "value for name".to_s, 2)
-  end
-  
-  it "renders task point value" do
-    render
-    
-    response.should have_text(/Point Value/)
-  end
 end
 
